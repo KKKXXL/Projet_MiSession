@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
     public float spawnTime = 0.8f;
-    public GameObject monsterPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +26,9 @@ public class EnemySpawn : MonoBehaviour
     {
         float x = Random.Range(-8, 8);
         float y = 6;
-        GameObject monster = Instantiate(monsterPrefab);
+        GameObject monster = EnemyPool.Instance.GetPoolObject();
         monster.transform.position = new Vector3(x, y, 0);
+        monster.SetActive(true);
+       
     }
 }

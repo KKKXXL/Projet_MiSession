@@ -11,7 +11,6 @@ public class MyGame : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject pausePanel;
     public static bool GameIsPaused = false;
-    public static GameController Instance;
     public Text scoreText;
 
     public void addScore(int value)
