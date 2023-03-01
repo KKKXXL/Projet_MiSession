@@ -57,6 +57,9 @@ public void BtnStart()
     void Start()
     {
         MenuPanel.SetActive(true);
+        PageIntro.SetActive(false);
+        PageLevel.SetActive(false);
+        PageGameSetting.SetActive(false);
     }
 
     // Update is called once per frame
